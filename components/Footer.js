@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -8,7 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Column */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">E-Cell</h3>
+            <Image src="/logo.png" width={100} height={100} />
+            {/* <h3 className="text-2xl font-bold text-white mb-4">E-Cell</h3> */}
+
             <p className="text-gray-400 mb-4">
               Enterprenuership Cell, NIT Jamshedpur serving innovation and high-impact initiatives.
             </p>
@@ -77,11 +79,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="bg-gray-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-800 text-white px-4 py-2  focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-4 py-2  hover:bg-blue-700 transition-colors"
               >
                 Subscribe
               </button>
