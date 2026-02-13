@@ -625,7 +625,7 @@ export default function Home() {
                 Ready to Join Our Community?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Become a part of NIT Jamshedpur's vibrant student community and make your college life memorable
+                Become a part of NIT Jamshedpur&apos;s vibrant student community and make your college life memorable
               </p>
               <Link href={'/contact'} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact for Clubs

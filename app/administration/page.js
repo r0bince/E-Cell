@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-export default function page() {
+export default function Page() {
     const [activeTab, setActiveTab] = useState('director');
 
 
