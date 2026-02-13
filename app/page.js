@@ -107,7 +107,7 @@ export default function Home() {
           >
             {/* Animated subtitle */}
             <motion.p
-              className="text-blue-400 font-medium mb-4 text-lg sm:text-xl"
+              className="text-blue-500 font-medium mb-4 text-lg sm:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -354,7 +354,7 @@ export default function Home() {
           },
           {
             title: "Cultural Activities",
-            description: "Express yourself through music, dance, and art at NIT JSR's cultural events, highlighted by the annual CULFEST where you can showcase your talents.",
+            description: "Express yourself through music, dance, and art at NIT JSR cultural events, highlighted by the annual CULFEST where you can showcase your talents.",
             image: "/cultural-activities.JPG",
             stats: [
               { number: "8+", label: "Cultural Clubs" },
@@ -542,7 +542,7 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-blue-900 mb-2">Dr Rakesh Pratap Singh</h3>
-                  <p className="text-gray-700 mb-1">Dean Students' Welfare</p>
+                  <p className="text-gray-700 mb-1">Dean Students&apos; Welfare</p>
                   <p className="text-gray-600 text-sm">NIT Jamshedpur</p>
                 </div>
               </div>
