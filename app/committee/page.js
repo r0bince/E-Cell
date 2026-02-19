@@ -20,7 +20,7 @@ export default function Page() {
     president: {
       label: "President E-Cell",
       name: "Raj Aryan",
-      image: "/avatar.png",
+      image: "/teamPhoto/raj.png",
       contact: {
         email: "clicksm052@gmail.com",
         phone: "+91-82522-33759",
@@ -30,7 +30,7 @@ export default function Page() {
     vicePresident: {
       label: "Vice-President E-Cell",
       name: "Ayush Kumar Singh",
-      image: "/avatar.png",
+      image: "/teamPhoto/ayush.png",
       contact: {
         email: "2023ugcs086@nitjsr.ac.in",
         phone: "+91-81277-57516",
@@ -40,7 +40,7 @@ export default function Page() {
     generalSecratary: {
       label: "General Secretary",
       name: "Pratik Mode",
-      image: "/avatar.png",
+      image: "/teamPhoto/pratik.png",
       contact: {
         email: "2023ugce070@nitjsr.ac.in",
         phone: "+91-81025-68482",
@@ -50,7 +50,7 @@ export default function Page() {
     jointSecratary: {
       label: "Joint Secretary",
       name: "Varun Singh",
-      image: "/avatar.png",
+      image: "/teamPhoto/varun.jpeg",
       contact: {
         email: "2024ugce044@nitjsr.ac.in",
         phone: "+91-79035-07606",
@@ -60,7 +60,7 @@ export default function Page() {
     webAndTechHead: {
       label: "Web and Tech Head",
       name: "Aditya Raj",
-      image: "/avatar.png",
+      image: "/teamPhoto/aditya.jpg",
       contact: {
         email: "2024ugcs012@nitjsr.ac.in",
         phone: "+91-79035-07606",
@@ -80,7 +80,7 @@ export default function Page() {
     contentHead: {
       label: "Content Head",
       name: "Harshit Gupta",
-      image: "/avatar.png",
+      image: "/teamPhoto/harshit.png",
       contact: {
         email: "harshitgupta1031@gmail.com",
         phone: "7869810252",
@@ -93,7 +93,7 @@ export default function Page() {
       people: [
         {
           name: "Karthik",
-          image: "/avatar.png",
+          image: "/teamPhoto/kartik.png",
           contact: {
             email: "karthik.thammisetty369@gmail.com",
             phone: "+91-88090-36369",
@@ -102,7 +102,7 @@ export default function Page() {
         },
         {
           name: "Arpit Saraswath",
-          image: "/avatar.png",
+          image: "/teamPhoto/arpit.png",
           contact: {
             email: "2024ugcm025@gmail.com",
             phone: "+91-93697-72060",
@@ -116,7 +116,7 @@ export default function Page() {
       people: [
         {
           name: "Stuti Kasera",
-          image: "/avatar.png",
+          image: "/teamPhoto/stutimaam.png",
           contact: {
             email: "sanjeetkasera200@gmail.com",
             phone: "9305639401",
@@ -125,7 +125,7 @@ export default function Page() {
         },
         {
           name: "Aryan kumar singh",
-          image: "/avatar.png",
+          image: "/teamPhoto/aryan.jpeg",
           contact: {
             email: "rajaryansingh021@gmail.com ",
             phone: "9234211755",
@@ -140,7 +140,7 @@ export default function Page() {
       people: [
         {
           name: "Shikhar Singh",
-          image: "/avatar.png",
+          image: "/teamPhoto/shikhar.jpeg",
           contact: {
             email: "singhshikhar2005@gmail.com ",
             phone: "7080680295",
@@ -163,7 +163,7 @@ export default function Page() {
       people: [
         {
           name: "Tanishka Joshi",
-          image: "/avatar.png",
+          image: "/teamPhoto/tanishka.jpeg",
           contact: {
             email: "2024ugcs005@nitjsr.ac.in ",
             phone: "9355793315",
