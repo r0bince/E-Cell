@@ -23,6 +23,7 @@ export default function NoticesPage() {
     "mentorship",
     "funding_news",
     "success_stories",
+    "induction_results",
     "webinars",
     "competitions",
   ];
@@ -35,6 +36,7 @@ export default function NoticesPage() {
     mentorship: "🤝 Mentorship Programs",
     funding_news: "💰 Funding & Grants",
     success_stories: "🏆 Success Stories",
+    induction_results: "Induction Results",
     webinars: "🎥 Webinars & Talks",
     competitions: "🎯 Business Competitions",
   };
@@ -46,6 +48,7 @@ export default function NoticesPage() {
     mentorship: "🤝",
     funding_news: "💰",
     success_stories: "🏆",
+    induction_results: "🎓",
     webinars: "🎥",
     competitions: "🎯",
   };
@@ -57,9 +60,49 @@ export default function NoticesPage() {
     mentorship: "bg-blue-100 text-blue-800 border-blue-200",
     funding_news: "bg-yellow-100 text-yellow-800 border-yellow-200",
     success_stories: "bg-pink-100 text-pink-800 border-pink-200",
+    induction_results: "bg-emerald-100 text-emerald-800 border-emerald-200",
     webinars: "bg-indigo-100 text-indigo-800 border-indigo-200",
     competitions: "bg-red-100 text-red-800 border-red-200",
   };
+
+  const inductionNotices = [
+    {
+      _id: "induction-2026-1st",
+      title: "E-Cell Inductions 2026: 1st Year Result",
+      content:
+        "The results for the 1st Year Inductions 2026 are now live. Download the list and follow the next steps shared by the E-Cell team.",
+      category: "induction_results",
+      priority: "urgent",
+      createdAt: "2026-03-15T00:00:00.000Z",
+      image: "/1styearInductie.png",
+      files: [
+        {
+          url: "/1styearInductie.png",
+        },
+      ],
+    },
+    {
+      _id: "induction-2026-2nd",
+      title: "E-Cell Inductions 2026: 2nd Year Result",
+      content:
+        "The 2nd Year Induction results for 2026 have been published. Review the outcome and complete onboarding before the deadline.",
+      category: "induction_results",
+      priority: "urgent",
+      createdAt: "2026-03-15T00:00:00.000Z",
+      image: "/2ndyearInductie.png",
+      files: [
+        {
+          url: "/2ndyearInductie.png",
+        },
+      ],
+    },
+  ];
+
+  const displayNotices = [...inductionNotices, ...notices];
+  const filteredNotices = displayNotices.filter(
+    (notice) =>
+      selectedCategory === "all" || notice.category === selectedCategory,
+  );
 
   useEffect(() => {
     fetchNotices();
@@ -316,7 +359,7 @@ export default function NoticesPage() {
               >
                 {error}
               </motion.div>
-            ) : notices.length === 0 ? (
+            ) : filteredNotices.length === 0 ? (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -340,7 +383,7 @@ export default function NoticesPage() {
                   }
                 >
                   <AnimatePresence>
-                    {notices.map((notice, index) => (
+                    {filteredNotices.map((notice, index) => (
                       <motion.div
                         key={notice._id}
                         layout
@@ -364,12 +407,12 @@ export default function NoticesPage() {
                               {categoryLabels[notice.category] ||
                                 notice.category}
                             </span>
-                            {notice.priority === "urgent" && (
+                            {/* {notice.priority === "urgent" && (
                               <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium flex items-center border border-red-200">
                                 <span className="animate-pulse mr-1">🔴</span>
                                 Limited Seats
                               </span>
-                            )}
+                            )} */}
                           </div>
 
                           {/* Title */}

@@ -29,6 +29,30 @@ export default function Home() {
     events: "Events & Festivals",
   };
 
+  // Featured Induction Results (2026)
+  const inductionResultNotices = [
+    {
+      _id: "induction-2026-1st",
+      title: "E-Cell Inductions 2026: 1st Year Result",
+      content:
+        "Congratulations! The 1st Year Induction results for E-Cell 2026 are now live. Check the list and reach out to your coordinator for next steps.",
+      category: "success_stories",
+      priority: "urgent",
+      createdAt: "2026-03-15T00:00:00.000Z",
+      image: "/1styearInductie.png",
+    },
+    {
+      _id: "induction-2026-2nd",
+      title: "E-Cell Inductions 2026: 2nd Year Result",
+      content:
+        "The 2nd Year Induction results for 2026 have been published. Please review your selection and complete the onboarding forms.",
+      category: "success_stories",
+      priority: "urgent",
+      createdAt: "2026-03-15T00:00:00.000Z",
+      image: "/2ndyearInductie.png",
+    },
+  ];
+
   useEffect(() => {
     fetchRecentNotices();
   }, []);
@@ -66,6 +90,9 @@ export default function Home() {
   };
 
   const videoRef = useRef(null);
+
+  // Ensure induction results show even if API is slow or empty
+  const displayNotices = [...inductionResultNotices, ...notices];
 
   // const handleLoadedMetadata = () => {
   //   if (videoRef.current) {
@@ -233,7 +260,7 @@ export default function Home() {
 
       {/* Startup Bulletin Section */}
       <section
-        className={`relative py-20 bg-gradient-to-b from-gray-50 to-white ${!notices.length ? "pt-36" : ""}`}
+        className={`relative py-20 bg-gradient-to-b from-gray-50 to-white ${!displayNotices.length ? "pt-36" : ""}`}
       >
         <div className="container mx-auto px-4">
           {/* Section Header */}
@@ -260,7 +287,7 @@ export default function Home() {
                   Fetching latest opportunities...
                 </p>
               </div>
-            ) : notices.length === 0 ? (
+            ) : displayNotices.length === 0 ? (
               <div className="text-center py-16 bg-white shadow-md shadow-gray-200 border border-gray-100 rounded-md">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   No Active Announcements
@@ -271,7 +298,7 @@ export default function Home() {
               </div>
             ) : (
               <div className="space-y-6">
-                {notices.map((notice, index) => (
+                {displayNotices.map((notice, index) => (
                   <motion.div
                     key={notice._id}
                     className={`group relative bg-white shadow-md border shadow-gray-200 border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden rounded-md`}
@@ -311,6 +338,17 @@ export default function Home() {
                       <p className="text-gray-600 mb-4 line-clamp-2">
                         {notice.content}
                       </p>
+
+                      {/* Optional Image Preview */}
+                      {notice.image && (
+                        <div className="mb-4 overflow-hidden rounded-lg">
+                          <img
+                            src={notice.image}
+                            alt={notice.title}
+                            className="w-full h-40 object-cover"
+                          />
+                        </div>
+                      )}
 
                       {/* Meta Info */}
                       <div className="flex items-center justify-between flex-wrap gap-3 text-sm">
